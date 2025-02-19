@@ -1,0 +1,69 @@
+.navBar {
+  background-color: #fff !important; /* Dark background to make links visible */
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #060606 !important; /* Ensure visibility on dark background */
+}
+
+.logo {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Navigation Links */
+.navLink {
+  color: rgb(0, 0, 0) !important;
+  font-size: 1rem;
+  margin-left: 15px;
+  padding: 8px 12px;
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 5px; */
+  text-decoration: none;
+  display: block; /* Ensures visibility */
+  position: relative; /* Required for the pseudo-element */
+}
+
+/* Hover Effect */
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Border Animation */
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: gold;
+  transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Navbar Toggle Button */
+.toggle {
+  border: none;
+  background: transparent !important;
+}
+
+/* Responsive Menu Fix */
+@media (max-width: 991px) {
+  .navBar {
+    text-align: center;
+  }
+  .navLink {
+    display: block;
+    margin: 5px 0;
+  }
+}
