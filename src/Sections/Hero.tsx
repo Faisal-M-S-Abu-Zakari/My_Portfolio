@@ -16,7 +16,7 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="min-h-[90vh] flex items-center justify-center !px-6 !py-12 "
+      className="min-h-screen flex items-center justify-center !px-6 !py-12 bg-gradient-to-br from-gray-50 to-gray-100 mt-16 md:mt-0"
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -77,7 +77,7 @@ const Hero = () => {
                     strings: [
                       "Frontend Development",
                       "React.js",
-                      "UI/UX Design",
+                      "Web Development",
                     ],
                     autoStart: true,
                     loop: true,
