@@ -56,7 +56,9 @@ const Skills = () => {
           className="flex items-center justify-center gap-3 mb-8"
         >
           <FolderCode color="#ffffff" size={50} />
-          <h2 className="text-white text-2xl font-bold">Skills & Abilities</h2>
+          <h2 className="text-white text-2xl !font-extrabold">
+            Skills & <span className="text-amber-300">Abilities</span>
+          </h2>
         </motion.div>
 
         {/* Skills Grid */}
