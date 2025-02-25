@@ -78,13 +78,18 @@ const Work = () => {
           Projects <span className="text-[#ffe600] ml-1">Made</span>
         </h2>
       </motion.div>
-      <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 w-[80vw]">
-        {projects.map((pro) => {
+      <motion.div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 w-[80vw]">
+        {projects.map((pro, index) => {
           return (
             <motion.div
               className="group relative rounded-xl overflow-hidden shadow-xl transition-transform duration-200 hover:italic "
               whileHover={{ y: -5 }}
-              transition={{ duration: 0.2 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
             >
               <div className="relative h-[400px] w-full">
                 <img
@@ -142,7 +147,7 @@ const Work = () => {
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 };
