@@ -4,6 +4,7 @@ import Hero from "./Sections/Hero";
 import About from "./Sections/About";
 import BackToTop from "./Sections/BackToTop";
 import Skills from "./Sections/Skills";
+import Education from "./Sections/Education";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <BackToTop />
       <Skills />
+      <Education />
     </>
   );
 }
