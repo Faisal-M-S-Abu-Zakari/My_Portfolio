@@ -84,12 +84,12 @@ const NavBar = () => {
               key={item.to}
               to={item.to}
               smooth={true}
-              duration={800}
-              offset={-70} // Adjust for navbar height
-              className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
-              onClick={() => setIsOpen(false)}
+              duration={200}
+              offset={-70}
+              className=" block relative !px-3 !py-2 text-gray-700 hover:text-gray-900 font-medium rounded-md transition-colors text-decoration-none group cursor-pointer"
             >
               {item.label}
+              <span className="absolute w-0 bottom-0 left-0 h-[2px] bg-yellow-400 transition-all duration-300 ease-in-out group-hover:w-[80px]"></span>
             </Link>
           ))}
         </div>
