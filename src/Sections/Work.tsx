@@ -9,6 +9,7 @@ import food from "/food.jpg";
 import dessert from "/dessert.jpg";
 import nike from "/nike.jpg";
 import seo from "/seo.jpg";
+
 const projects = [
   {
     image: movie,
@@ -44,7 +45,7 @@ const projects = [
   },
   {
     image: nike,
-    title: " Nike Ecommerce",
+    title: "Nike Ecommerce",
     description:
       "A simple Nike e-commerce application featuring a variety of Nike shoe collections. Explore different styles, view detailed product information, and place orders effortlessly for your perfect pair.",
     github: "https://github.com/Faisal-M-S-Abu-Zakari/Nike-ecommerce",
@@ -54,14 +55,16 @@ const projects = [
     image: seo,
     title: "Landing Page",
     description:
-      " Seonatomy provide top-quality SEO solutions with innovative designs and expert guidance. Enhance your online presence with our cutting-edge strategies and user-friendly experiences..",
+      "Seonatomy provide top-quality SEO solutions with innovative designs and expert guidance. Enhance your online presence with our cutting-edge strategies and user-friendly experiences.",
     github: "https://github.com/Faisal-M-S-Abu-Zakari/Landing-Page",
     demo: "https://landing-page-ivory-three-89.vercel.app/",
   },
 ];
+
 const Work = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.2 });
+
   return (
     <section
       id="work"
@@ -76,14 +79,17 @@ const Work = () => {
       >
         <LiaLaptopCodeSolid size={50} className="text-white" />
         <h2 className="text-white text-2xl !font-extrabold flex">
-          Projects <span className="text-[#ffe600] ml-1">Made</span>
+          My <span className="text-[#ffe600] ml-1">Projects</span>
         </h2>
       </motion.div>
-      <motion.div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 w-[80vw]">
+
+      {/* Responsive grid */}
+      <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 w-full max-w-7xl">
         {projects.map((pro, index) => {
           return (
             <motion.div
-              className="group relative rounded-xl overflow-hidden shadow-xl transition-transform duration-200 hover:italic "
+              key={index}
+              className="group relative rounded-xl overflow-hidden shadow-xl transition-transform duration-200 hover:italic"
               whileHover={{ y: -5 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
               transition={{
@@ -92,10 +98,10 @@ const Work = () => {
                 ease: "easeOut",
               }}
             >
-              <div className="relative h-[400px] w-full">
+              <div className="relative h-64 w-full sm:h-80 md:h-96">
                 <img
                   src={pro.image}
-                  alt="Phoneix WebSite"
+                  alt="Project Image"
                   className="w-full h-full object-cover"
                 />
 
@@ -110,7 +116,7 @@ const Work = () => {
                     initial={{ y: 0 }}
                     whileHover={{ y: -5 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-[#ffe600] font-bold text-xl p-3  cursor-pointer"
+                    className="bg-[#ffe600] font-bold text-xl p-3 cursor-pointer"
                   >
                     {pro.title}
                   </motion.h3>
@@ -152,4 +158,5 @@ const Work = () => {
     </section>
   );
 };
+
 export default Work;

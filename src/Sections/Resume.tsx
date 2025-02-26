@@ -1,36 +1,52 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+
 const Resume = () => {
   const [loading, setLoading] = useState(false);
-  const [error] = useState(false);
+  const resumeUrl = "/FaisalMAbuZakari.pdf"; // Ensure the file is in the public folder
+
   const handleDownload = () => {
     setLoading(true);
     const link = document.createElement("a");
-    link.href = "../../public/FaisalMAbuZakari.pdf"; // Set the path to your resume
-    link.download = "Faisal_Resume.pdf"; // Set the desired file name
+    link.href = resumeUrl;
+    link.download = "Faisal_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     setLoading(false);
   };
+
   const handlePreview = () => {
-    window.open("../../public/FaisalMAbuZakari.pdf", "_blank");
+    window.open(resumeUrl, "_blank");
   };
+
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.4 });
+
   return (
     <section
       ref={sectionRef}
-      className="bg-[#e5ecfb] !min-h-[50vh] flex  justify-center items-center py-5"
+      className="bg-[#e5ecfb] !min-h-[50vh] flex flex-col justify-center items-center py-5 text-center"
       id="resume"
     >
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        transition={{ duration: 0.5 }}
+        className="text-3xl font-bold text-gray-800 mb-4"
+      >
+        My Resume
+      </motion.h2>
+      <p className="text-lg text-gray-600 mb-6">
+        Here you can view or download my resume to learn more about my
+        professional experience and skills.
+      </p>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
-        className="text-center flex gap-5"
+        className="flex gap-5"
       >
-        {error && <p className="text-red-500">Error downloading the resume.</p>}
         <motion.button
           onClick={handleDownload}
           disabled={loading}

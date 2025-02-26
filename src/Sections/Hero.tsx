@@ -88,22 +88,32 @@ const Hero = () => {
                 />
               </span>
             </motion.div>
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="!px-8 !py-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white !rounded-4xl font-medium text-lg shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-all duration-300"
+
+            {/* Updated Link to Wrap Around the Button */}
+            <Link
+              to="about" // This is the target section ID
+              smooth={true} // Smooth scrolling
+              duration={100} // Duration of the scroll
             >
-              <Link to="about">About Me ↓</Link>
-            </motion.button>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.8 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="!px-8 !py-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white !rounded-4xl font-medium text-lg shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-all duration-300"
+              >
+                About Me ↓
+              </motion.button>
+            </Link>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
               className="flex gap-4 pt-4"
             >
+              {/* Social Links */}
               {[
                 {
                   Icon: FaLinkedin,
@@ -150,6 +160,7 @@ const Hero = () => {
               ))}
             </motion.div>
           </motion.div>
+
           {/* Right Content - Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
