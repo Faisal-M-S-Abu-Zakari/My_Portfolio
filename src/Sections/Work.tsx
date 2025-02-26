@@ -1,5 +1,5 @@
 import { useInView, motion } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";

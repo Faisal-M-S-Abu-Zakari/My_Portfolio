@@ -1,5 +1,5 @@
 import { useInView, motion } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import university from "/university.jpg";
 const Education = () => {

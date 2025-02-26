@@ -1,4 +1,3 @@
-import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { motion } from "framer-motion";
 import {
