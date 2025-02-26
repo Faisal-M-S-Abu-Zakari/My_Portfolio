@@ -9,7 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import { FaHandPaper } from "react-icons/fa";
-
+import { Link } from "react-scroll";
 const Hero = () => {
   return (
     <motion.div
@@ -96,7 +96,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="!px-8 !py-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white !rounded-4xl font-medium text-lg shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-all duration-300"
             >
-              About Me ↓
+              <Link to="about">About Me ↓</Link>
             </motion.button>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
