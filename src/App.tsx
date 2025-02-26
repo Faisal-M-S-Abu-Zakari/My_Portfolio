@@ -7,6 +7,7 @@ import Skills from "./Sections/Skills";
 import Education from "./Sections/Education";
 import Work from "./Sections/Work";
 import Footer from "./Sections/Footer";
+import Resume from "./Sections/Resume";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Skills />
       <Education />
       <Work />
+      <Resume />
       <Footer />
     </>
   );
