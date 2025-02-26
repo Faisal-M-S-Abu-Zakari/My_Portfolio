@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { User } from "lucide-react";
-import faisal from "../../public/faisal.jpg";
+import faisal from "/faisal.jpg";
 import { useRef } from "react";
 
 const AboutSection = () => {

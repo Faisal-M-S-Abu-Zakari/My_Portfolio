@@ -3,12 +3,12 @@ import React, { useRef } from "react";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
-import around from "../../public/around.jpg";
-import movie from "../../public/movie.jpg";
-import food from "../../public/food.jpg";
-import dessert from "../../public/dessert.jpg";
-import nike from "../../public/nike.jpg";
-import seo from "../../public/seo.jpg";
+import around from "/around.jpg";
+import movie from "/movie.jpg";
+import food from "/food.jpg";
+import dessert from "/dessert.jpg";
+import nike from "/nike.jpg";
+import seo from "/seo.jpg";
 const projects = [
   {
     image: movie,

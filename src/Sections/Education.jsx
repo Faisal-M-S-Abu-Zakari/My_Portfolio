@@ -1,7 +1,7 @@
 import { useInView, motion } from "framer-motion";
 import React, { useRef } from "react";
 import { FaGraduationCap } from "react-icons/fa";
-import university from "../../public/university.jpg";
+import university from "/university.jpg";
 const Education = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.4 }); // Detects when 30% of section is in view
