@@ -1,13 +1,13 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Hero from "./Sections/Hero";
-import About from "./Sections/About";
-import BackToTop from "./Sections/BackToTop";
-import Skills from "./Sections/Skills";
-import Education from "./Sections/Education";
-import Work from "./Sections/Work";
-import Footer from "./Sections/Footer";
-import Resume from "./Sections/Resume";
+import About from "./Sections/About.tsx";
+import BackToTop from "./Sections/BackToTop.tsx";
+import Skills from "./Sections/Skills.tsx";
+import Education from "./Sections/Education.tsx";
+import Work from "./Sections/Work.tsx";
+import Footer from "./Sections/Footer.tsx";
+import Resume from "./Sections/Resume.tsx";
 
 function App() {
   return (
