@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 const Resume = () => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error] = useState(false);
   const handleDownload = () => {
     setLoading(true);
     const link = document.createElement("a");
