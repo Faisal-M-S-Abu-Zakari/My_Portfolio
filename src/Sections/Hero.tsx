@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Typewriter from "typewriter-effect";
+import { Typewriter } from "react-simple-typewriter";
 import {
   FaLinkedin,
   FaGithub,
@@ -74,15 +74,17 @@ const Hero = () => {
               I Am Into{" "}
               <span className="text-rose-500">
                 <Typewriter
-                  options={{
-                    strings: [
-                      "Frontend Development",
-                      "React.js",
-                      "Web Development",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
+                  words={[
+                    "Frontend Development",
+                    "React.js",
+                    "Web Development",
+                  ]}
+                  loop={true}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={50}
+                  deleteSpeed={30}
+                  delaySpeed={2000}
                 />
               </span>
             </motion.div>
