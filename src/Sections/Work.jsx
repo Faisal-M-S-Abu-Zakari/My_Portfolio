@@ -61,9 +61,10 @@ const projects = [
 ];
 const Work = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.4 });
+  const isInView = useInView(sectionRef, { amount: 0.2 });
   return (
     <section
+      id="work"
       ref={sectionRef}
       className="bg-[#000030] min-h-screen flex flex-col justify-start items-center py-5"
     >

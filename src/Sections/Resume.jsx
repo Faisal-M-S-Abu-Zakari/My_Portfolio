@@ -22,6 +22,7 @@ const Resume = () => {
     <section
       ref={sectionRef}
       className="bg-[#e5ecfb] !min-h-[50vh] flex  justify-center items-center py-5"
+      id="resume"
     >
       <motion.div
         initial={{ opacity: 0, y: -20 }}

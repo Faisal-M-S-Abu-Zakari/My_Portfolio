@@ -33,7 +33,7 @@ const menuItems = [
 ];
 const Footer = () => {
   return (
-    <footer className="bg-[#00012b] text-white py-8 px-4">
+    <footer className="bg-[#00012b] text-white py-8 px-4 !min-h-[50vh]">
       <div className="container mx-auto flex  md:flex-row justify-around items-start">
         {/* Faisal's Portfolio Section */}
         <div className="mb-6 md:mb-0 text-start md:text-left flex flex-col gap-2.5 ">

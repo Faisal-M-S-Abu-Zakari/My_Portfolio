@@ -8,6 +8,7 @@ const Education = () => {
 
   return (
     <section
+      id="education"
       ref={sectionRef}
       className="bg-[#e5ecfb] min-h-[50vh] flex flex-col justify-start items-center py-5"
     >

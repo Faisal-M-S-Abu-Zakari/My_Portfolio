@@ -46,7 +46,7 @@ const Skills = () => {
   const isInView = useInView(sectionRef, { amount: 0.4 }); // Detects when 30% of section is in view
 
   return (
-    <section ref={sectionRef} className="bg-[#5605a2] min-h-screen">
+    <section id="skills" ref={sectionRef} className="bg-[#5605a2] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-6 min-h-screen flex items-center flex-col">
         {/* Title Section */}
         <motion.div

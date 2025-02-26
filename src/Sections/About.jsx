@@ -10,6 +10,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
+      id="about"
       className="max-w-7xl mx-auto px-4 py-16 min-h-screen flex items-center"
     >
       <div className="w-full flex flex-col gap-12">
