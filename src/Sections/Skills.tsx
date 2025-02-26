@@ -43,11 +43,11 @@ const skills = [
 
 const Skills = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.4 }); // Detects when 30% of section is in view
+  const isInView = useInView(sectionRef, { amount: 0.4 });
 
   return (
     <section id="skills" ref={sectionRef} className="bg-[#5605a2] min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 py-6 min-h-screen flex items-center flex-col">
+      <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
         {/* Title Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -56,13 +56,13 @@ const Skills = () => {
           className="flex items-center justify-center gap-3 mb-8"
         >
           <FolderCode color="#ffffff" size={50} />
-          <h2 className="text-white text-2xl !font-extrabold">
+          <h2 className="text-white text-2xl sm:text-3xl font-extrabold">
             Skills & <span className="text-amber-300">Abilities</span>
           </h2>
         </motion.div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-4 gap-4 bg-[#33026d] w-[900px] p-10 rounded-2xl">
+        {/* Skills Grid - Responsive */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 w-full max-w-4xl p-6 bg-[#33026d] rounded-2xl">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
@@ -73,11 +73,13 @@ const Skills = () => {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="flex flex-col items-center bg-[#05001f] p-3 rounded-2xl cursor-pointer"
+              className="flex flex-col items-center bg-[#05001f] p-4 rounded-2xl cursor-default"
               whileHover={{ scale: 1.1 }}
             >
               <div className="text-4xl">{skill.icon}</div>
-              <span className="text-white mt-2">{skill.label}</span>
+              <span className="text-white mt-2 text-sm sm:text-base">
+                {skill.label}
+              </span>
             </motion.div>
           ))}
         </div>
