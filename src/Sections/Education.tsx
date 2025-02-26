@@ -2,15 +2,16 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import university from "/university.jpg";
+
 const Education = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.4 }); // Detects when 30% of section is in view
+  const isInView = useInView(sectionRef, { amount: 0.4 }); // Detects when 40% of section is in view
 
   return (
     <section
       id="education"
       ref={sectionRef}
-      className="bg-[#e5ecfb] min-h-[50vh] flex flex-col justify-start items-center py-5"
+      className="bg-[#e5ecfb] min-h-[50vh] flex flex-col justify-start items-center py-5 px-3"
     >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -28,7 +29,6 @@ const Education = () => {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{
           duration: 0.3,
-
           ease: "easeOut",
         }}
       >
@@ -41,16 +41,21 @@ const Education = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
           transition={{
             duration: 0.3,
-
             ease: "easeOut",
           }}
-          className="flex bg-white shadow-2xl rounded-2xl  gap-4"
+          className="flex bg-white shadow-2xl rounded-2xl gap-4"
         >
-          <div>
-            <img src={university} className="rounded-l-2xl" />
+          <div className="flex-shrink-0">
+            <img
+              src={university}
+              className="rounded-l-2xl object-cover h-60 w-48 sm:h-64 sm:w-64 md:h-60 md:w-80"
+              alt="University"
+            />
           </div>
-          <div className="flex flex-col p-3 gap-2">
-            <h3 className="!text-[#012970]">Bachelor of Sotware Engineering</h3>
+          <div className="flex flex-col p-1 gap-2 justify-center">
+            <h3 className="!text-[#012970]">
+              Bachelor of Software Engineering
+            </h3>
             <span>
               College of Software Engineering and Artificial Intelligence
             </span>
@@ -58,7 +63,6 @@ const Education = () => {
               <span className="border-r-2 pr-2.5 text-[#226d00]">
                 2020-2025
               </span>
-
               <span className="text-[#226d00]">Completed</span>
             </div>
           </div>
