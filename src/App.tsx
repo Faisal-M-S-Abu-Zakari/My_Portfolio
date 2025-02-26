@@ -6,6 +6,7 @@ import BackToTop from "./Sections/BackToTop";
 import Skills from "./Sections/Skills";
 import Education from "./Sections/Education";
 import Work from "./Sections/Work";
+import Footer from "./Sections/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Education />
       <Work />
+      <Footer />
     </>
   );
 }
