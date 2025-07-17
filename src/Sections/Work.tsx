@@ -9,6 +9,7 @@ import food from "/food.jpg";
 import dessert from "/dessert.jpg";
 import nike from "/nike.jpg";
 import seo from "/seo.jpg";
+import hrxel from "../../public/hrxel.jpg";
 
 const projects = [
   {
@@ -58,6 +59,14 @@ const projects = [
       "Seonatomy provide top-quality SEO solutions with innovative designs and expert guidance. Enhance your online presence with our cutting-edge strategies and user-friendly experiences.",
     github: "https://github.com/Faisal-M-S-Abu-Zakari/Landing-Page",
     demo: "https://landing-page-ivory-three-89.vercel.app/",
+  },
+  {
+    image: hrxel,
+    title: "HRXEL Landing Page",
+    description:
+      "A Saudi consulting firm reshaping human capital, building institutional excellence, enhancing governance, and advancing supply chains and individual development... with Saudi nationals who understand their market.",
+    github: "https://github.com/Faisal-M-S-Abu-Zakari/Landing-Page",
+    demo: "https://www.hrxel.com/",
   },
 ];
 
